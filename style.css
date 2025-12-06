@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*include padding and border inside the element’s width and height*/
+}
+body{
+    background-color:#f5e1dd;
+    text-align: center;
+    padding: 2vmin;
+}
+.title{
+    margin: 5vmin 0 2vmin;
+    font-style: italic;
+    color:#c73434;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:4vmin;
+    text-shadow: 1px 1px 2px #fff;
+}
+.container{
+    height:70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vmin;
+    /* border: 1px solid black; */
+
+}
+.game {
+    width: 70vmin;
+    height: 70vmin;
+    max-width: 90vw;
+    max-height: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6vmin;
+    background-color: #1D546C;
+    border-radius: 2vmin;
+    padding: 1.5vmin;
+    box-sizing: border-box; 
+    border: 0.2vmin solid #fff;
+}
+.box {
+    flex: 0 0 calc(33.33% - 1.5vmin);/*[flex-grow] [flex-shrink] [flex-basis]*/
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1; /*automatically keeps the squares perfect (equal height & width)*/
+    border-radius: 2vmin;
+    border: none;
+    background-color: #f3d1d1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    touch-action: manipulation;/*Disable default touch gestures like double-tap zoom or pinch-zoom*/
+}
+
+.box:hover:not(:disabled) { /*do NOT apply the style if the button is disabled*/
+    transform: scale(1.05);
+    background-color: #e8baba;
+}
+
+
+.box img{
+    height:90%;
+    width:90%;
+    border-radius: 2vmin;
+    object-fit: contain;
+}
+
+#reset-btn{
+    margin-top: 4vmin;
+    padding: 1.5vmin 3.5vmin;
+    font-size: 3vmin;
+    font-weight: 600;
+    border-radius: 1vmin;
+    background-color: #fff;
+    border: 0.3vmin solid #143a4a;
+    color: #143a4a;
+    cursor: pointer; /*hand icon*/
+    transition: 0.3s;
+}
+#reset-btn:hover {
+    background-color: #143a4a;
+    color: white;
+}
+.hide{
+    /* display: none; */
+    visibility: hidden;
+}
+.msg-container {
+    margin-top: 3vmin;
+    padding: 2vmin 4vmin;
+    border: 0.3vmin dashed #143a4a;
+    background-color: white;
+    display: inline-block;
+    font-size: 3vmin;
+    font-weight: bold;
+    animation: blink 2s ease-in infinite;
+}
+
+@keyframes blink {
+    0% {
+        background-color: white;
+        color: #143a4a;
+        border-color: #143a4a;
+    }
+    100% {
+        background-color: #143a4a;
+        color: white;
+        border-color: white;
+    }
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 6vmin;
+    }
+    #reset-btn {
+        font-size: 3.5vmin;
+    }
+}
+@media (max-width: 480px) {
+    .game {
+        width: 90vw;
+        height: 90vw;
+        padding: 2vmin;
+    }
+    .box {
+        max-width: 30vw;
+        max-height: 30vw;
+    }
+    .title {
+        font-size: 7vmin;
+    }
+    #reset-btn {
+        font-size: 4vmin;
+    }
+}
