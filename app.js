@@ -20,7 +20,8 @@ const resetGame=()=>{
     turnO=true;
     enableBtn();
     count=0;
-    msgContainer.classList.add("hide");
+    msgContainer.classList.remove("show");
+
 };
 
 boxes.forEach((box)=>{
@@ -61,12 +62,13 @@ const enableBtn=()=>{
 
 const showWinner=(winner)=>{
     msgContainer.innerText= winner+" WON";
-    msgContainer.classList.remove("hide");
+    msgContainer.classList.add("show");
+
 };
 
 const draw=()=>{
     msgContainer.innerText="Draw! Try Again.";
-    msgContainer.classList.remove("hide");
+    msgContainer.classList.add("show");
 }
 
 const checkWinner=()=>{
