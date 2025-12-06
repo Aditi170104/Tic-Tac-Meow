@@ -56,20 +56,16 @@ body{
     transition: 0.2s ease-in-out;
     touch-action: manipulation;/*Disable default touch gestures like double-tap zoom or pinch-zoom*/
 }
-
 .box:hover:not(:disabled) { /*do NOT apply the style if the button is disabled*/
     transform: scale(1.05);
     background-color: #e8baba;
 }
-
-
 .box img{
     height:90%;
     width:90%;
     border-radius: 2vmin;
     object-fit: contain;
 }
-
 #reset-btn{
     margin-top: 4vmin;
     padding: 1.5vmin 3.5vmin;
@@ -86,19 +82,22 @@ body{
     background-color: #143a4a;
     color: white;
 }
-.hide{
-    /* display: none; */
-    visibility: hidden;
-}
 .msg-container {
-    margin-top: 3vmin;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     padding: 2vmin 4vmin;
-    border: 0.3vmin dashed #143a4a;
+    font-size: 4vmin;
+    transform: translate(-50%, -50%);/*Move the element up and left by half its size so it is perfectly centered on the screen.*/
     background-color: white;
-    display: inline-block;
-    font-size: 3vmin;
+    border: 0.3vmin solid #c73434; 
+    z-index: 1000;
+    display: none; /* initially hidden */
+    text-align: center;
     font-weight: bold;
-    animation: blink 2s ease-in infinite;
+}
+.show {
+    display: block;
 }
 
 @keyframes blink {
