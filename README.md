@@ -23,3 +23,6 @@
 3. First player to align three icons wins.
 4. If all tiles are filled without a winner, it's a draw.
 5. Click "Reset Game" to start again.
+
+
+<img width="818" height="854" alt="image" src="https://github.com/user-attachments/assets/56508564-669e-41dd-8c9c-c95b9ce1b60b" />
