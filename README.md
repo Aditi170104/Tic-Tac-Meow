@@ -25,4 +25,4 @@
 5. Click "Reset Game" to start again.
 
 
-<img width="818" height="854" alt="image" src="https://github.com/user-attachments/assets/56508564-669e-41dd-8c9c-c95b9ce1b60b" />
+<img width="618" height="654" alt="image" src="https://github.com/user-attachments/assets/56508564-669e-41dd-8c9c-c95b9ce1b60b" />
